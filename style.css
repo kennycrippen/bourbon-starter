@@ -1,0 +1,25 @@
+/******************************************************************
+Theme Name: WP Bourbon Starter Theme
+Theme URI: http://www.kennycrippen.com
+Description: 
+Author: Your Name Here
+Author URI: http://www.kennycrippen.com
+Version: 0.1
+Tags: 
+
+------------------------------------------------------------------
+
+This theme uses Sass.
+You will find the .scss files in the /library/scss directory.
+Those files compile to the styles.css found in the library/css directory.
+
+This theme uses Grunt to compile Sass, JS, and do other cool things
+http://gruntjs.com/
+http://24ways.org/2013/grunt-is-not-weird-and-hard/
+
+---------------------------------------------------------------
+
+Because this file is not being used for styles,
+feel free to use it to leave notes to yourself.
+
+******************************************************************/

@@ -1,0 +1,7 @@
+.DS_Store
+library/scss/.sass-cache/*
+.sass-cache/*
+node_modules
+library/css/style.css
+library/js/build/production.js
+library/js/build/production.min.js
