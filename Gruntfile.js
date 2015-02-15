@@ -20,15 +20,19 @@ module.exports = function(grunt) {
 		    }
 		},
 
-		compass: {
-		    dist: {
-		        options: {
-		            outputStyle: 'expanded',
-		            sassDir: 'library/scss',
-		            cssDir: 'library/css',
-		        }
-		    }
-		},
+		sass: {                              // Task
+	    dist: {                            // Target
+	      options: {                       // Target options
+	        style: 'expanded',
+	        lineNumbers: true,
+	        loadPath: require('node-neat').includePaths,
+	        compass: true
+	      },
+	      files: {                         // Dictionary of files
+	        'library/css/style.css': 'library/scss/style.scss'       // 'destination': 'source'
+	      }
+	    }
+	  },
 
 		watch: {
 		    options: {
@@ -43,7 +47,7 @@ module.exports = function(grunt) {
 		    },
 		    css: {
 			    files: ['library/scss/*.scss'],
-			    tasks: ['compass'],
+			    tasks: ['sass'],
 			    options: {
 			        spawn: false,
 			    }
@@ -53,12 +57,12 @@ module.exports = function(grunt) {
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['compass', 'watch', 'concat', 'uglify']);
+    grunt.registerTask('default', ['watch', 'concat', 'uglify', 'sass']);
 
 };
