@@ -17,6 +17,6 @@
     @include span-columns(6);
     height: 800px;
 	  background: red;
-	  // @include omega();
+	  @include omega(); 
   }
 }

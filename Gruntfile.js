@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 	        style: 'expanded',
 	        lineNumbers: true,
 	        loadPath: require('node-neat').includePaths,
-	        compass: true
+	        compass: false
 	      },
 	      files: {                         // Dictionary of files
 	        'library/css/style.css': 'library/scss/style.scss'       // 'destination': 'source'
