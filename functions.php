@@ -1,7 +1,6 @@
 <?php
 
-// Fire all functions
-// we're firing all out initial functions at the start
+// Fire functions
 add_action('after_setup_theme','crippen_start', 16);
 
 function crippen_start() {
@@ -33,9 +32,7 @@ function crippen_start() {
 } /* end crippen start */
 
 /*********************
-WP_HEAD GOODNESS
-The default wordpress head is a mess. 
-Let's clean it up by removing all the junk we don't need.
+WP_HEAD Clean Up
 *********************/
 
 function crippen_head_cleanup() {
@@ -158,7 +155,7 @@ return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '"
 }
 
 /*********************
-MENUS & NAVIGATION
+MENUS
 *********************/
 // REGISTER MENUS
 register_nav_menus(
@@ -235,41 +232,7 @@ function crippen_register_sidebars() {
     'after_title' => '</h4>',
   ));
 
-  register_sidebar(array(
-    'id' => 'offcanvas',
-    'name' => __('Offcanvas', 'crippentheme'),
-    'description' => __('The offcanvas sidebar.', 'crippentheme'),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
-    'after_title' => '</h4>',
-  ));
-
-  /*
-  to add more sidebars or widgetized areas, copy
-  and edit the above sidebar code. In order to call
-  your new sidebar use the following code:
-
-  Change the name to whatever your new
-  sidebar's id is, for example:
-
-  register_sidebar(array(
-    'id' => 'sidebar2',
-    'name' => __('Sidebar 2', 'crippentheme'),
-    'description' => __('The second (secondary) sidebar.', 'crippentheme'),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
-    'after_title' => '</h4>',
-  ));
-
-  To call the sidebar in your template, you can copy
-  the sidebar.php file and rename it to your sidebar's name.
-  So using the above example, it would be:
-  sidebar-sidebar2.php
-
-  */
-} // don't remove this bracket!
+}
 
 /*********************
 PAGE NAVI

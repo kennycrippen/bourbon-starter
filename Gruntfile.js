@@ -7,6 +7,7 @@ module.exports = function(grunt) {
         concat: {
 	            dist: {
 		        src: [
+		        		'library/js/slick.js',
                 'library/js/app.js'
 		        ],
 		        dest: 'library/js/build/production.js', // build a file with all js in a folder named build
