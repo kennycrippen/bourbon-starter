@@ -25,6 +25,7 @@ module.exports = function(grunt) {
 	      options: {                       // Target options
 	        style: 'expanded',
 	        lineNumbers: true,
+	        loadPath: require('node-bourbon').includePaths,
 	        loadPath: require('node-neat').includePaths,
 	        compass: true
 	      },
